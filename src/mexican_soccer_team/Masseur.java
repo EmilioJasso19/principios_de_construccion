@@ -2,9 +2,11 @@ package mexican_soccer_team;
 
 public class Masseur extends  Staff{
 
+    // Attributes
     private String profession;
     private Integer yearsOfExperience;
 
+    // Constructors
     public Masseur() {
     }
 
@@ -14,6 +16,7 @@ public class Masseur extends  Staff{
         this.yearsOfExperience = yearsOfExperience;
     }
 
+    // Methods
     public String getProfession() {
         return profession;
     }
@@ -30,6 +33,20 @@ public class Masseur extends  Staff{
         this.yearsOfExperience = yearsOfExperience;
     }
 
+    public void massage() {
+        for (int i = 0; i <= 3; i++) {
+
+            if (i < 3) System.out.println("Massaging...");
+            else System.out.println("Happy end :)");
+            try {
+                Thread.sleep(2 * 1000);
+            } catch (InterruptedException e) {
+                System.out.println(e);
+            }
+        }
+    }
+
+    // Override Methods
     @Override
     public void focus() {
         super.focus();
@@ -49,13 +66,4 @@ public class Masseur extends  Staff{
                 "\tyears of experience: " + getYearsOfExperience();
     }
 
-    public void massage() {
-        System.out.println("* MASAJEANDO *");
-        try {
-            Thread.sleep(2 * 1000);
-            System.out.println("Final feliz :)");
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-    }
 }

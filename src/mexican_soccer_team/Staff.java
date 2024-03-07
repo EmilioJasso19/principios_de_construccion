@@ -1,14 +1,14 @@
 package mexican_soccer_team;
 
-public class Staff {
+public abstract class Staff {
 
-    // Atributos
+    // Attributes
     private Integer id;
     private String name;
     private String lastname;
     private Integer age;
 
-    // Constructores
+    // Constructors
     public Staff() {
     }
 
@@ -19,6 +19,7 @@ public class Staff {
         this.age = age;
     }
 
+    // Methods
     public Integer getId() {
         return id;
     }
