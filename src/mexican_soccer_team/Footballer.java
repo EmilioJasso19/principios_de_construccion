@@ -2,9 +2,11 @@ package mexican_soccer_team;
 
 public class Footballer extends Staff {
 
+    // Attributes
     private Integer numberOfPlayer;
     private String position;
 
+    // Constructors
     public Footballer() {
     }
 
@@ -14,6 +16,7 @@ public class Footballer extends Staff {
         this.position = position;
     }
 
+    // Methods
     public Integer getNumberOfPlayer() {
         return numberOfPlayer;
     }
@@ -31,13 +34,29 @@ public class Footballer extends Staff {
     }
 
     public void playMatch() {
-        System.out.println("Jugué chingón");
+        final int MINIMUM_TIME_PLAYED = 15;
+        final int MATCH_DURATION = 90;
+        int timePlayed = (int) ((Math.random() * MATCH_DURATION) + MINIMUM_TIME_PLAYED);
+        System.out.println(getName() +
+                ", with the dorsal " +
+                getNumberOfPlayer() +
+                ", played " + timePlayed
+                + " minutes ");
     }
 
     public void training() {
-        System.out.println("Se mató Manuel");
+        for (int i = 0; i <= 4; i++) {
+            try {
+                Thread.sleep(2 * 1000);
+                if (i < 4) System.out.println("Training...");
+                else System.out.println("End of the session");
+            } catch (InterruptedException e) {
+                System.out.println(e);
+            }
+        }
     }
 
+    // Override Methods
     @Override
     public void focus() {
         super.focus();
