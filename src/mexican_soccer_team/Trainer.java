@@ -26,7 +26,8 @@ public class Trainer extends Staff{
         for (int i = 0; i <= 9; i++) {
             try {
                 Thread.sleep(1000);
-                if (i == 4) System.out.println("Part-time");
+                if (i == 0) System.out.println("Starts the match");
+                else if (i == 4) System.out.println("Part-time");
                 else if (i < 9) System.out.println("Bla, bla, bla...");
                 else System.out.println("End of the match");
             } catch (InterruptedException e) {
